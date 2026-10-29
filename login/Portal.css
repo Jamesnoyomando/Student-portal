@@ -1,0 +1,80 @@
+/* --- Portal Page Custom Styles --- */
+
+
+body {
+    background-color: #f5f6fa !important; /* Your original dark blue */
+    color: #ffffff; /* Default text to white */
+}
+
+/* 2. Fix the Container width so cards sit side-by-side */
+.container {
+    max-width: 1140px !important; /* Overrides the 750px from the registration page */
+    width: 100%;
+}
+
+/* 3. Navbar - Light Grey Background */
+.navbar.bg-dark {
+    background-color: #e2e8f0 !important; 
+    border-bottom: 1px solid #cbd5e1;
+    border-radius: 8px 8px 0 0; /* Optional: rounds the top corners slightly */
+}
+.navbar .navbar-brand,
+.navbar .nav-link {
+    color: #1e293b !important; 
+}
+.navbar .nav-link:hover {
+    color: #2563eb !important; 
+}
+.navbar .navbar-toggler-icon {
+    filter: invert(1); 
+}
+
+/* 4. Hero Section - White Background, Black Text */
+.bg-primary {
+    background-color: #ffffff !important; 
+    color: #000000 !important; 
+    padding-top: 4rem !important;
+    padding-bottom: 4rem !important;
+    border-radius: 0 0 8px 8px; /* Rounds the bottom corners */
+    margin-bottom: 2rem;
+}
+.bg-primary .display-4 {
+    color: #000000 !important; 
+}
+
+/* 5. Section Title - Make it visible against the dark background */
+section h2 {
+    color: #0f0f0f !important; 
+}
+
+/* 6. Course Cards - Light Blue Borders */
+.card {
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    border: 2px solid #bae6fd !important; 
+    background-color: #ffffff;
+    color: #1e293b; /* Dark text inside the white cards */
+}
+.card:hover {
+    transform: translateY(-5px); 
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.4) !important;
+}
+
+/* 7. Buttons */
+.btn-outline-primary {
+    color: #2563eb;
+    border-color: #2563eb;
+}
+.btn-outline-primary:hover {
+    background-color: #2563eb;
+    color: white;
+}
+
+/* 8. Footer - Dark Glass Effect */
+footer.bg-dark {
+    background-color: rgba(50, 53, 52, 0.7) !important; 
+    backdrop-filter: blur(10px); 
+    -webkit-backdrop-filter: blur(10px);
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    color: #ffffff;
+    margin-top: 3rem;
+}

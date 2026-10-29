@@ -1,0 +1,214 @@
+:root {
+    --bg-main: #0f172a;
+    --card-bg: #ffffff;
+    --text-primary: #1e293b;
+    --text-secondary: #64748b;
+    --border-color: #cbd5e1;
+    --brand-primary: #2563eb;
+    --brand-hover: #1d4ed8;
+    --error: #dc2626;
+    --success-bg: #f0fdf4;
+    --success-text: #166534;
+    --font: "Inter", system-ui, -apple-system, sans-serif;
+    --radius: 10px;
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    font-family: var(--font);
+    background-color: var(--bg-main);
+    color: var(--text-primary);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem 1rem;
+}
+
+.container {
+    width: 100%;
+    max-width: 750px;
+}
+
+.card {
+    background-color: var(--card-bg);
+    border-radius: 16px;
+    box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
+    padding: 2.5rem 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.header-section {
+    text-align: center;
+}
+
+.header-section h1 {
+    margin: 0 0 0.5rem;
+    font-size: 1.75rem;
+    font-weight: 700;
+    color: var(--text-primary);
+}
+
+.login-link {
+    margin: 0;
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+}
+
+.login-link a {
+    color: var(--brand-primary);
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.login-link a:hover {
+    text-decoration: underline;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+}
+
+.row {
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+}
+
+.field {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+}
+
+label {
+    margin-bottom: 0.4rem;
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: var(--text-primary);
+}
+
+input, select {
+    width: 100%;
+    padding: 0.75rem 1rem;
+    font: inherit;
+    font-size: 0.95rem;
+    color: var(--text-primary);
+    background-color: #f8fafc;
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius);
+    transition: all 0.2s ease;
+}
+
+input:focus, select:focus {
+    outline: none;
+    border-color: var(--brand-primary);
+    background-color: #ffffff;
+    box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.15);
+}
+
+.hint {
+    margin-top: 0.3rem;
+    font-size: 0.75rem;
+    color: var(--text-secondary);
+}
+
+.error {
+    min-height: 1rem;
+    margin-top: 0.25rem;
+    font-size: 0.78rem;
+    color: var(--error);
+}
+
+.field.invalid input,
+.field.invalid select {
+    border-color: var(--error);
+    background-color: #fef2f2;
+}
+
+.field.valid input,
+.field.valid select {
+    border-color: #16a34a;
+}
+
+.submit-btn {
+    margin-top: 0.5rem;
+    padding: 0.85rem 1rem;
+    font: inherit;
+    font-size: 1rem;
+    font-weight: 600;
+    color: #ffffff;
+    background-color: var(--brand-primary);
+    border: none;
+    border-radius: var(--radius);
+    cursor: pointer;
+    transition: background-color 0.2s ease, transform 0.1s ease;
+}
+
+.submit-btn:hover {
+    background-color: var(--brand-hover);
+}
+
+.submit-btn:active {
+    transform: scale(0.98);
+}
+
+#message { margin-top: 0.5rem; }
+
+#message.success {
+    padding: 1rem;
+    color: var(--success-text);
+    background-color: var(--success-bg);
+    border: 1px solid #bbf7d0;
+    border-radius: var(--radius);
+    font-weight: 500;
+    text-align: center;
+}
+
+/* Group Footer Styles */
+.group-footer {
+    margin-top: 1.5rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid #e2e8f0;
+    text-align: center;
+}
+
+.group-title {
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: var(--text-secondary);
+    margin-bottom: 0.75rem;
+}
+
+.id-pills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    justify-content: center;
+}
+
+.id-pill {
+    background-color: #f1f5f9;
+    color: var(--text-primary);
+    padding: 0.3rem 0.6rem;
+    border-radius: 6px;
+    font-size: 0.8rem;
+    font-weight: 500;
+    font-family: monospace;
+}
+
+/* Responsive layout for wider screens */
+@media (min-width: 640px) {
+    .row {
+        flex-direction: row;
+        gap: 1rem;
+    }
+}
+
